@@ -1,0 +1,204 @@
+{
+    "info": {
+        "name": "Fau Ecommerce API",
+        "_postman_id": "fau-ecommerce-api",
+        "description": "Colecci\u00f3n de endpoints para el proyecto final Java Spring Boot - Ecommerce",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Clientes",
+            "item": [
+                {
+                    "name": "Listar Clientes",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/clientes",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "clientes"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear Cliente",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nombre\": \"Juan\", \"apellido\": \"P\\u00e9rez\", \"email\": \"juan.perez@example.com\"}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/clientes",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "clientes"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Productos",
+            "item": [
+                {
+                    "name": "Listar Productos",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/productos",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "productos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear Producto",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nombre\": \"Teclado\", \"descripcion\": \"Teclado mec\\u00e1nico retroiluminado\", \"precio\": 15000, \"stock\": 10}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/productos",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "productos"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "\u00d3rdenes",
+            "item": [
+                {
+                    "name": "Listar \u00d3rdenes",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/ordenes",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "ordenes"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear Orden",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"clienteId\": 1, \"productos\": [1, 2]}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/ordenes",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "ordenes"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Facturas",
+            "item": [
+                {
+                    "name": "Listar Facturas",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/facturas",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "facturas"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crear Factura",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"ordenId\": 1}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/api/facturas",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "facturas"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
